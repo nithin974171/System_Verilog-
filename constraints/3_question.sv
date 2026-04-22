@@ -47,11 +47,11 @@ class child;
   string s;
 
   constraint x1{
-    str.size() = 7;
+    str.size() == 7;
     foreach(str[i]) str[i] inside {[97:122]};
   }
 
-  constraint x1{
+  constraint x2{
     foreach(str[i]){
       if(i<str.size/2){
         str[i] == str[str.size-1-i];
